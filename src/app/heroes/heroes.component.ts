@@ -12,7 +12,8 @@ export class HeroesComponent implements OnInit {
   selectedHero:Hero;
   
   getHeroes():void{
-    this.heroes = this.heroService.getHeroes();
+    //Take what gets returned by getHeroes, and assign it.
+    this.heroService.getHeroes().subscribe(heroesByObs => this.heroes = heroesByObs);
   }
 
   onSelect(hero:Hero):void{
