@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { of } from 'rxjs/observable/of';
+ 
 
+// @Injectable({
+//   providedIn: 'root',
+// })
 @Injectable()
 export class MessageService {
-
-  messages:string[] = [];
-  public add(message:string){
-    this.messages.push(message)
+  messages: string[] = [];
+ 
+  add(message: string) {
+    this.messages.push(message);
   }
-
-  clear(){
+ 
+  clear() {
     this.messages = [];
   }
 }
